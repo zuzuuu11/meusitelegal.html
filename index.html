@@ -1,0 +1,396 @@
+" é um comentário.
+  O navegador ignora os comentários, eles servem para NÓS, humanos,
+  entendermos o que o código faz.
+-->
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conecta Design - Seu Portal de Carreira</title>
+
+    <style>
+        /* Este é um comentário em CSS. 
+          Vamos começar com algumas regras gerais.
+        */
+
+        /* O seletor '*' (asterisco) seleciona TUDO na página.
+           Usamos para "resetar" algumas coisas. */
+        * {
+            /* 'box-sizing' muda como o navegador calcula o tamanho das caixas.
+               'border-box' é mais fácil de usar: padding e borda não aumentam o tamanho total. */
+            box-sizing: border-box;
+            /* Removemos margens e preenchimentos padrão que os navegadores colocam. */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* O seletor 'body' estiliza a tag <body> inteira (o corpo do site). */
+        body {
+            /* 'font-family' define a fonte (tipo de letra) do site. 
+               'sans-serif' é uma escolha segura e moderna (sem "pezinhos" nas letras). */
+            font-family: Arial, "Helvetica Neue", sans-serif;
+            /* 'background-color' define a cor do fundo. 
+               Usamos um tom de azul bem clarinho, como você pediu. */
+            background-color: #f4f7fc; /* Este é um código hexadecimal para um azul-claro/cinza */
+            /* 'color' define a cor padrão do texto. Um cinza escuro (quase preto) é bom para leitura. */
+            color: #333333;
+            /* 'line-height' define o espaço entre as linhas do texto, facilitando a leitura. */
+            line-height: 1.6;
+        }
+
+        /* O seletor 'header' estiliza nossa tag <header>. */
+        header {
+            /* 'background' define o fundo. Aqui usamos um 'linear-gradient' (gradiente linear)
+               que vai de um tom de roxo (#7a4af6) para um tom de azul (#4a4ae6). */
+            background: linear-gradient(45deg, #4a4ae6, #7a4af6);
+            /* 'color' aqui define a cor do texto DENTRO do header. 
+               Usamos branco (#ffffff) para contrastar com o fundo escuro. */
+            color: #ffffff;
+            /* 'padding' adiciona um espaço interno (um "acolchoamento") dentro do header. */
+            padding: 20px;
+            /* 'text-align' alinha o texto no centro. */
+            text-align: center;
+        }
+
+        /* O seletor 'nav' estiliza a nossa tag <nav> (navegação). */
+        nav {
+            /* Damos a ele uma cor de fundo verde-clara, como você pediu. */
+            background-color: #d0f0d0; /* Tom de verde-claro */
+            /* E um preenchimento (padding) para os links não ficarem colados nas bordas. */
+            padding: 10px;
+            /* Alinhamos os links no centro. */
+            text-align: center;
+        }
+
+        /* 'nav ul' seleciona a lista <ul> que está DENTRO da <nav>. */
+        nav ul {
+            /* 'list-style' remove as "bolinhas" padrão da lista. */
+            list-style: none;
+        }
+
+        /* 'nav ul li' seleciona os itens <li> da lista <ul> DENTRO da <nav>. */
+        nav ul li {
+            /* 'display: inline-block' faz os itens da lista ficarem lado a lado (em linha)
+               em vez de um embaixo do outro. */
+            display: inline-block;
+            /* 'margin' adiciona um espaço externo, separando os itens. */
+            margin: 0 15px;
+        }
+
+        /* 'nav ul li a' seleciona os links <a> DENTRO dos itens <li>... */
+        nav ul li a {
+            /* 'color' define a cor do texto do link. Usamos preto para destacar no fundo verde. */
+            color: #000000;
+            /* 'text-decoration: none' remove o sublinhado padrão dos links. */
+            text-decoration: none;
+            /* 'font-weight: bold' deixa o texto em negrito. */
+            font-weight: bold;
+        }
+
+        /* ':hover' é uma "pseudo-classe". Isso define o estilo QUANDO o mouse passa por cima. */
+        nav ul li a:hover {
+            /* Quando o mouse passar por cima, mudamos a cor do texto para o nosso roxo. */
+            color: #7a4af6;
+        }
+
+        /* O seletor 'main' estiliza a tag <main> (conteúdo principal). */
+        main {
+            /* 'max-width' define a largura máxima do conteúdo. 
+               Isso impede que o texto se estique demais em telas grandes. */
+            max-width: 900px;
+            /* 'margin: 20px auto' faz duas coisas: 
+               '20px' dá uma margem em cima e embaixo.
+               'auto' nas laterais centraliza o <main> na página. */
+            margin: 20px auto;
+            /* 'padding' dá um espaço interno, para o conteúdo não colar nas bordas. */
+            padding: 0 20px;
+        }
+
+        /* O seletor 'section' estiliza todas as nossas tags <section>. */
+        section {
+            /* 'background-color: #ffffff' dá um fundo branco para cada seção, 
+               destacando-as do fundo claro do site. */
+            background-color: #ffffff;
+            /* 'margin-bottom' adiciona um espaço ABAIXO de cada seção. */
+            margin-bottom: 25px;
+            /* 'padding' dá um espaço interno. */
+            padding: 20px;
+            /* 'border-radius' arredonda as bordas das seções. */
+            border-radius: 8px;
+            /* 'box-shadow' adiciona uma sombra sutil, dando um efeito "flutuante". */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* O seletor 'h2' estiliza os títulos de nível 2 (os títulos das nossas seções). */
+        h2 {
+            /* Cor roxa para os títulos. */
+            color: #7a4af6;
+            /* Margem abaixo do título. */
+            margin-bottom: 15px;
+        }
+        
+        /* Esta é a nossa classe! 
+           Um seletor com '.' (ponto) seleciona qualquer tag que tenha o 'class="..."'
+           correspondente no HTML. */
+        
+        /* Estiliza os títulos que serão clicáveis */
+        .titulo-clicavel {
+            /* 'cursor: pointer' muda o cursor do mouse para uma "mãozinha" 
+               quando ele passa por cima, indicando que é clicável. */
+            cursor: pointer;
+            /* Adiciona um 'detalhe' de borda inferior verde-claro. */
+            border-bottom: 3px solid #d0f0d0;
+            /* Preenchimento (padding) na parte de baixo. */
+            padding-bottom: 5px;
+        }
+
+        /* Estiliza os títulos clicáveis QUANDO o mouse passa por cima. */
+        .titulo-clicavel:hover {
+            /* Muda a cor do fundo para o nosso verde-claro. */
+            background-color: #f0fff0; /* Um verde mais claro ainda */
+        }
+        
+        /* Estiliza as nossas descrições de seção (que começam escondidas). */
+        .descricao-secao {
+            /* Fundo azul bem clarinho para destacar a descrição. */
+            background-color: #f4f7fc;
+            /* 'border-left' coloca uma borda grossa azul à esquerda. */
+            border-left: 5px solid #4a4ae6;
+            /* 'padding' (espaço interno). */
+            padding: 10px;
+            /* 'margin' (espaço externo), 10px em cima/baixo, 0px nas laterais. */
+            margin: 10px 0;
+            /* 'font-style: italic' deixa o texto em itálico. */
+            font-style: italic;
+        }
+
+        /* O seletor 'article' estiliza nossas tags <article> (os blocos de vagas/cursos). */
+        article {
+            /* Adiciona uma borda superior. */
+            border-top: 1px solid #eee;
+            /* 'padding' (espaço interno) em cima e embaixo. */
+            padding: 15px 0;
+        }
+
+        /* 'article:first-of-type' seleciona APENAS o primeiro <article> de cada seção. */
+        article:first-of-type {
+            /* Removemos a borda superior do primeiro item. */
+            border-top: none;
+        }
+
+        /* O seletor 'h3' estiliza os títulos de nível 3 (títulos das vagas/cursos). */
+        h3 {
+            /* Cor azul para os títulos de vagas. */
+            color: #4a4ae6;
+            /* Margem abaixo. */
+            margin-bottom: 5px;
+        }
+
+        /* O seletor 'footer' estiliza a tag <footer> (rodapé). */
+        footer {
+            /* Alinha o texto no centro. */
+            text-align: center;
+            /* 'padding' (espaço interno). */
+            padding: 20px;
+            /* Margem no topo, para separar do conteúdo. */
+            margin-top: 20px;
+            /* Cor de fundo verde-clara, igual ao menu. */
+            background-color: #d0f0d0;
+            /* Cor do texto preta. */
+            color: #000000;
+            /* 'font-size' muda o tamanho do texto. '0.9em' é 90% do tamanho normal. */
+            font-size: 0.9em;
+        }
+
+    </style>
+    </head>
+<body>
+
+    <header>
+        <h1>Conecta Design</h1>
+        <p>Encontre sua vaga, aprimore seu talento e inspire-se.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#vagas">Vagas</a>
+            </li>
+            <li>
+                <a href="#cursos">Cursos</a>
+            </li>
+            <li>
+                <a href="#livros">Livros (PDFs)</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="vagas">
+            <h2 class="titulo-clicavel">Vagas em Destaque</h2>
+            
+            <p class="descricao-secao" style="display: none;">
+                Clique no título para mostrar/esconder esta descrição! 
+                Aqui você encontra as últimas oportunidades para designers gráficos, 
+                UX/UI designers e artistas digitais.
+            </p>
+
+            <article>
+                <h3>Designer Gráfico Pleno</h3>
+                <p>Empresa: Agência Criativa Soluções</p>
+                <p>Local: Remoto (Brasil)</p>
+                <p>Requisitos: Photoshop, Illustrator, 3+ anos de experiência.</p>
+            </article>
+
+            <article>
+                <h3>UX/UI Designer Júnior</h3>
+                <p>Empresa: Startup Tech Inova</p>
+                <p>Local: São Paulo, SP (Híbrido)</p>
+                <p>Requisitos: Figma, noções de pesquisa com usuário.</p>
+            </article>
+
+            <article>
+                <h3>Artista 2D para Games</h3>
+                <p>Empresa: Estúdio de Jogos Pixel</p>
+                <p>Local: Curitiba, PR</p>
+                <p>Requisitos: Criação de personagens e cenários, paixão por games.</p>
+            </article>
+        </section>
+
+        <section id="cursos">
+            <h2 class="titulo-clicavel">Cursos para seu Currículo</h2>
+            
+            <p class="descricao-secao" style="display: none;">
+                Clique no título para mostrar/esconder! 
+                Invista em você. Estes cursos vão te ajudar a se destacar 
+                no mercado de design.
+            </p>
+
+            <article>
+                <h3>Curso Completo de Figma (Do Básico ao Pro)</h3>
+                <p>Plataforma: Design Academy</p>
+                <p>Nível: Iniciante ao Avançado</p>
+            </article>
+
+            <article>
+                <h3>Fundamentos do Design Gráfico</h3>
+                <p>Plataforma: Aprenda Design</p>
+                <p>Nível: Iniciante</p>
+            </article>
+        </section>
+
+        <section id="livros">
+            <h2 class="titulo-clicavel">Biblioteca PDF</h2>
+
+            <p class="descricao-secao" style="display: none;">
+                Clique no título para mostrar/esconder! 
+                Conhecimento é poder. Baixe livros essenciais sobre design, 
+                tipografia, teoria das cores e mais.
+            </p>
+
+            <article>
+                <h3>Livro: "Psicologia das Cores"</h3>
+                <p>Autor: Eva Heller</p>
+                <p>Formato: PDF (Link de exemplo)</p>
+            </article>
+
+            <article>
+                <h3>Livro: "Não me faça pensar" (Sobre Usabilidade)</h3>
+                <p>Autor: Steve Krug</p>
+                <p>Formato: PDF (Link de exemplo)</p>
+            </article>
+        </section>
+
+    </main>
+    <footer>
+        <p>Site criado com 💜 por Olívia Helena (com uma ajudinha do Gemini!)</p>
+        <p>Projeto de Estudo - 2025</p>
+    </footer>
+
+
+    <script>
+        // Olá! Este é um comentário em JavaScript (JS).
+
+        // Nosso objetivo: Fazer a "mini descrição" aparecer quando alguém
+        // clicar nos títulos <h2>.
+
+        // 1. ENCONTRAR OS ELEMENTOS
+        // 'document.querySelectorAll' é um comando que diz:
+        // "JavaScript, por favor, encontre na página (document) TODOS (All) os elementos
+        // que têm a classe '.titulo-clicavel' e guarde eles para mim."
+        // 'const' significa que estamos criando uma "constante" (uma variável que não muda)
+        // chamada 'titulos'. 'titulos' agora é uma *lista* de todos os H2 clicáveis.
+        const titulos = document.querySelectorAll('.titulo-clicavel');
+
+        // 2. "OUVIR" OS CLIQUES EM CADA TÍTULO
+        // Como 'titulos' é uma lista, precisamos passar por CADA item dela.
+        // 'forEach' é um "loop", ele vai executar uma ação para cada item da lista.
+        // Leia-se: "Para cada (forEach) 'titulo' na lista 'titulos'..."
+        titulos.forEach(titulo => {
+            
+            // "...adicione um 'ouvidor' de evento" (addEventListener).
+            // Estamos dizendo: "Ei, 'titulo', fique 'ouvindo' (escutando) por um 'click'."
+            // "Quando você for clicado, execute a função chamada 'mostrarEsconderDescricao'."
+            titulo.addEventListener('click', mostrarEsconderDescricao);
+            
+            // Uma "função" é um bloco de código que executa uma tarefa.
+            // A função 'mostrarEsconderDescricao' é definida logo abaixo.
+        });
+
+        // 3. DEFINIR O QUE ACONTECE NO CLIQUE (A FUNÇÃO)
+        // 'function' declara uma nova função.
+        // 'event' é um objeto especial que o navegador nos dá, 
+        // com informações sobre o clique (como *quem* foi clicado).
+        function mostrarEsconderDescricao(event) {
+            
+            // 'event.target' nos diz EXATAMENTE qual elemento foi clicado.
+            // (Neste caso, será o <h2> específico que o usuário clicou).
+            // 'const elementoClicado = event.target;' // (Não precisamos desta linha, mas é bom saber)
+
+            // 'this' é uma palavra-chave especial. Dentro de um event listener,
+            // 'this' geralmente se refere ao elemento que está "ouvindo" o evento.
+            // Ou seja, 'this' é o <h2> que foi clicado.
+            
+            // 'nextElementSibling' significa "pegue o próximo irmão" (a próxima tag
+            // que está no mesmo nível, logo depois de mim no HTML).
+            // No nosso HTML, logo depois do <h2>, temos a <p class="descricao-secao">.
+            // Então, 'descricao' vai ser o parágrafo que queremos mostrar/esconder.
+            const descricao = this.nextElementSibling;
+
+            // 4. A LÓGICA DE MOSTRAR / ESCONDER
+            // Agora, vamos checar se a descrição está escondida ou não.
+            // 'descricao.style.display' lê a propriedade CSS 'display' do elemento.
+            
+            // 'if' é um "SE". 
+            // "SE (if) o 'display' da descrição for 'none' (ou seja, se ela estiver escondida)..."
+            if (descricao.style.display === 'none') {
+                
+                // "...então, mude o 'display' dela para 'block'."
+                // 'display: block' faz o parágrafo voltar a ser um elemento de bloco normal,
+                // fazendo ele APARECER na tela.
+                descricao.style.display = 'block';
+
+            } else {
+                // 'else' é um "SENÃO".
+                // "...SENÃO (ou seja, se o display NÃO for 'none', o que significa
+                // que ela está visível)..."
+
+                // "...então, mude o 'display' dela para 'none'."
+                // Isso vai ESCONDER o parágrafo novamente.
+                descricao.style.display = 'none';
+            }
+            
+            // E é isso! Esse é o "toggle" (alternar) que você queria!
+        }
+        
+    </script>
+    </body>
+</html>
